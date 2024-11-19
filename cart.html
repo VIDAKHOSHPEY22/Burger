@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبد خرید</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #ffeb3b; /* تغییر رنگ پس‌زمینه به زرد */
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .item {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .item button:hover {
+            background-color: #ff1a1a;
+        }
+        .checkout {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .checkout:hover {
+            background-color: #45a049;
+        }
+        .home-button {
+            margin-top: 20px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+        .home-button:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>سبد خرید</h2>
+        <div id="cart-items"></div>
+        <button class="checkout" onclick="checkout()">Checkout</button>
+        <a href="index.html" class="home-button">بازگشت به خانه</a> <!-- دکمه بازگشت به خانه -->
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            var cartItemsContainer = document.getElementById('cart-items');
+            cart.forEach(function(item, index) {
+                var itemElement = document.createElement('div');
+                itemElement.className = 'item';
+                itemElement.innerHTML = '<div><h5>' + item.name + '</h5><p>' + item.price + '</p></div><button onclick="removeItem(' + index + ')">حذف</button>';
+                cartItemsContainer.appendChild(itemElement);
+            });
+        });
+
+        function removeItem(index) {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();
+        }
+
+        function checkout() {
+            window.location.href = 'checkout.html';
+        }
+    </script>
+</body>
+</html>

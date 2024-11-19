@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00; /* Yellow color suitable for fast food */
+            direction: ltr; /* For left-to-right text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            width: 100%;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .login-form {
+            background-color: #fff;
+            padding: 40px; /* Increased padding for larger form */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Increased width for larger form */
+            text-align: center;
+            margin-top: 20px; /* Added margin to separate from navbar */
+        }
+        .login-form h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 15px; /* Increased padding for larger input fields */
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form button {
+            background-color: #007bff; /* Blue color for login button */
+            color: #fff;
+            border: none;
+            padding: 15px 20px; /* Increased padding for larger button */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">خانه</a>
+</div>
+
+<div class="login-form">
+    <h1>ورود</h1>
+    <input type="text" placeholder="نام کاربری">
+    <input type="password" placeholder="رمز">
+    <button onclick="window.location.href='index.html'">ورود</button>
+</div>
+
+</body>
+</html>
