@@ -30,3 +30,9 @@
 ## مجوز
 
 این پروژه تحت مجوز MIT منتشر شده است. برای اطلاعات بیشتر به فایل LICENSE مراجعه کنید.
+# پیش نمایش
+![alt text](https://github.com/VIDAKHOSHPEY22/Burger/blob/main/images/Screenshot%202024-12-26%20213136.png)
+
+این سرور زنده است . مشاهده کنید 
+
+https://vidakhoshpey22.github.io/Burger/
